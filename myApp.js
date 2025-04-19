@@ -1,7 +1,12 @@
 const express = require('express');
+const helmet = require('helmet');
+
 const app = express();
 
+// ✅ Mount ONLY the required middleware
+app.use(helmet.hidePoweredBy());
 
+module.exports = app; // ✅ Required by FCC
 
 
 
